@@ -1,7 +1,6 @@
 package com.trnet.controller;
 
-import com.trnet.dao.IEvents;
-import com.trnet.model.Contact;
+import com.trnet.model.Event;
 import com.trnet.service.IEventService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,11 +20,15 @@ public class Helloworld {
     @Autowired
     IEventService eventService;
 
+
     @RequestMapping(value = "/firstPage", method = RequestMethod.GET)
     public String test(ModelMap mm) {
         String a="davar";
-        List<Contact> contacts = eventService.contactList();
+        long l = System.currentTimeMillis();
+        List<Event> contacts = eventService.contactList();
         mm.addAttribute("test",a);
+        long l1 = System.currentTimeMillis();
+        System.out.println(l1-l);
         return "davar";
 
 
@@ -35,8 +38,8 @@ public class Helloworld {
 
     @RequestMapping(value = "/test",method = RequestMethod.GET)
 
-    public  @ResponseBody List<Contact> allList(){
-        List<Contact> contacts = eventService.contactList();
+    public  @ResponseBody List<Event> allList(){
+        List<Event> contacts = eventService.contactList();
         return contacts;
     }
 }

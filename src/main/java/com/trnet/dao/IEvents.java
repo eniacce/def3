@@ -1,6 +1,6 @@
 package com.trnet.dao;
 
-import com.trnet.model.Contact;
+import com.trnet.model.Event;
 
 import java.util.List;
 
@@ -9,5 +9,8 @@ import java.util.List;
  */
 
 public interface IEvents {
-public List<Contact> listEvents();
+public List<Event> listEvents();
+
+
+
 }

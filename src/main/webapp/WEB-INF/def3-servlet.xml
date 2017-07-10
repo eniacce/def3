@@ -15,12 +15,12 @@
     <mvc:annotation-driven />
 
     <bean id="mongo" class="org.springframework.data.mongodb.core.MongoFactoryBean">
-        <property name="host" value="localhost" />
+        <property name="host" value="172.17.0.194" />
     </bean>
 
     <bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
         <constructor-arg name="mongo" ref="mongo" />
-        <constructor-arg name="databaseName" value="mesut" />
+        <constructor-arg name="databaseName" value="ceilometer" />
     </bean>
     <bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
 

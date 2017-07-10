@@ -1,6 +1,6 @@
 package com.trnet.dao;
 
-import com.trnet.model.Contact;
+import com.trnet.model.Event;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Repository;
@@ -16,7 +16,10 @@ public class EventsDaoImp implements IEvents {
 private MongoTemplate mongoTemplate;
 
 
-    public List<Contact> listEvents() {
-        return mongoTemplate.findAll(Contact.class,"contact");
+    public List<Event> listEvents() {
+
+        return mongoTemplate.findAll(Event.class,"event");
     }
+
+
 }
