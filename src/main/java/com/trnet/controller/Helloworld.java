@@ -23,7 +23,7 @@ public class Helloworld {
 
     @RequestMapping(value = "/firstPage", method = RequestMethod.GET)
     public String test(ModelMap mm) {
-        String a="davar";
+        String a="davarsss";
         String bcd="denemes2222sssss33333s";
         long l = System.currentTimeMillis();
         List<Event> contacts = eventService.contactList();
