@@ -24,7 +24,7 @@ public class Helloworld {
     @RequestMapping(value = "/firstPage", method = RequestMethod.GET)
     public String test(ModelMap mm) {
         String a="davar";
-        String bcd="denemes2222sss";
+        String bcd="denemes2222ssssss";
         long l = System.currentTimeMillis();
         List<Event> contacts = eventService.contactList();
         mm.addAttribute("test",a);
